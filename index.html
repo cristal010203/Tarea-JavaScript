@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Usuario</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-user-cog"></i> Panel de Usuario</h1>
+    <label class="switch">
+      <input type="checkbox" id="modoOscuroToggle" onchange="toggleModoOscuro()" />
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="perfil">
+    <h2><i class="fas fa-id-card"></i> Información del Usuario</h2>
+    <p><strong>Nombre:</strong> <span id="nombreUsuario">Cristal</span></p>
+    <p><strong>Correo:</strong> <span id="correoUsuario">cristal@example.com</span></p>
+    <p><strong>Teléfono:</strong> <span id="telefonoUsuario">12345678</span></p>
+  </section>
+
+  <section class="acciones">
+    <h2><i class="fas fa-tools"></i> Acciones</h2>
+    <input type="text" id="inputTexto" placeholder="Actualizar nombre..." />
+    <div class="botones">
+      <input type="button" value="Actualizar Nombre" onclick="actualizarNombre()" />
+      <input type="button" value="Actualizar Correo" onclick="actualizarCorreo()" />
+      <input type="button" value="Actualizar Teléfono" onclick="actualizarTelefono()" />
+      <input type="button" value="Mostrar Datos" onclick="mostrarObjeto()" />
+      <input type="button" value="Eliminar Teléfono" onclick="eliminarPropiedad(objetoEjemplo)" />
+      <input type="button" value="Ocultar Panel" onclick="ocultarPanel()" />
+      <input type="button" value="Mostrar Panel" onclick="mostrarPanel()" />
+      <input type="button" value="Recargar Panel" onclick="recargarPanel()" />
+      <input type="button" value="Resaltar Panel" onclick="resaltarPanel()" />
+      <input type="button" value="Ejecutar Try Catch" onclick="manejoExcepciones()" />
+    </div>
+  </section>
+
+  <section id="container">
+    <h2><i class="fas fa-database"></i> Panel Dinámico</h2>
+  </section>
+
+  <section class="historial">
+    <h2><i class="fas fa-history"></i> Historial de Acciones</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Acción</th>
+          <th>Detalle</th>
+          <th>Hora</th>
+        </tr>
+      </thead>
+      <tbody id="tablaHistorial"></tbody>
+    </table>
+  </section>
+</body>
+</html>
